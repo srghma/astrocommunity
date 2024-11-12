@@ -11,11 +11,11 @@ return {
     optional = true,
     opts = function(_, opts)
       if opts.ensure_installed ~= "all" then
-        opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "idris2", "ipkg" })
+        opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "idris", "ipkg" })
       end
       -- will make ```idris foo = 1 + 2 ``` in markdown work
       -- when idris3 will be released - just replace idris2 with idris3
-      vim.treesitter.language.register("idris2", "idris")
+      vim.treesitter.language.register("idris", "idris2")
     end,
   },
   {
